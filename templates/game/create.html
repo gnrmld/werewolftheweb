@@ -11,6 +11,11 @@
             <label for="{{ form.name.id_for_label }}">Name</label>
             {{ form.name }}
         </div>
+        <div>
+            {{ form.max_players.errors }}
+            <label for="{{ form.max_players.id_for_label }}">Max Players</label>
+            {{ form.max_players }}
+        </div>
         <button type="submit" class="btn btn-success">Go</button>
     </form>
 </div>

@@ -6,10 +6,18 @@ html, body {
     background: linear-gradient(#3f3f3f {{ game_info.game_percent }}%, #ffddb4 {{ game_info.turns_remaining }}%, #DEFBFF);
 }
 </style>
-<div class='center_div'>
-{% if game_info.is_host %}
-    <a href="#" class='btn'>Stop Game</a><br />
-{% endif %}
-Waiting for other players...
+    <div class='center_div'>
+
+    {% if game_info.is_host %}
+        <a href="{% url 'end_game' pk=game.pk %}" class='btn'>Stop Game</a><br />
+    {% endif %}
+
+    Players: 
+    {% for player in players %}
+        {{ player.name }}<br />
+    {% endfor %}
+    <br /><br />
+
+    Waiting for other players...
 </div>
 {% endblock %}
