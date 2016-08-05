@@ -1,0 +1,22 @@
+{% extends 'bases/base.html' %}
+
+{% block content %}
+<div class='content' style='padding-left: 80px;'>
+
+    <h2>Roles</h2>
+    {% for role in roles %}
+    <div class='col-md-3'>
+            <img src="{{ role.image.url }}"><br />
+            <span style='color:yellow; font-weight:bold'>{{ role.name }}</span><br />
+            <span style='font-style:italic;'>"{{ role.characteristic|linebreaksbr }}"</span><br />
+            <span class='label'>Turn Order:</span>{{ role.turn_order }} <br />
+            <span class='label'>Count:</span>{{ role.count }}<br />
+    </div>
+        {% if forloop.counter|divisibleby:4 %}
+            <br clear='both' /><br clear='both' /><br clear='both' />
+        {% endif %}
+        
+        
+    {% endfor %}
+</div>
+{% endblock %}

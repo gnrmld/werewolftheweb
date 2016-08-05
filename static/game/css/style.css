@@ -1,0 +1,79 @@
+html,body {
+    /*background-color: #3f3f3f;*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(#3f3f3f 95%, #ffddb4);
+}
+
+.header {
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    margin:0px;
+}
+
+.header a {
+    color: black;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+.menu{
+    padding: 30px 15px 0px ;
+}
+.menu a{
+    color:#773b00;
+}
+
+#footer {
+    position: fixed;
+    bottom:0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+}
+
+.center_div {
+    color: black;
+    text-align: center;
+    width: 200px;
+    margin: 10% auto;
+    padding: 20px;
+}
+.center_div a {
+    background-color: #ffbc6a;
+    padding: 5px;
+    margin: 2px;
+    width: 100%;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder
+}
+
+.center_div a:hover {
+    background-color: #ffead2;
+}
+
+.game_select {
+    text-align: center;
+}
+
+.label {
+    text-decoration: underline;
+}
+
+.content {
+    color: white;
+    padding:  0 30px 30px 30px;
+    font-size:11px;
+}
+
+.ponkan {
+    background-color: #ef8319;
+}

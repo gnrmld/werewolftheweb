@@ -1,0 +1,10 @@
+{% extends 'bases/base.html' %}
+
+{% block content %}
+<div class='center_div'>
+    <div class='game_select'>
+        <a href="{% url 'create' %}" class='btn' >Create Game</a><br />
+        <a href="{% url 'game_list' %}" class='btn'>Enter Lobby</a><br />
+    </div>
+</div>
+{% endblock %}
