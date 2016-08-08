@@ -6,18 +6,47 @@ html, body {
     background: linear-gradient(#3f3f3f {{ game_info.game_percent }}%, #ffddb4 {{ game_info.turns_remaining }}%, #DEFBFF);
 }
 </style>
-    <div class='center_div'>
+    <div class='board_div col-md-8 col-md-offset-1'>
 
     {% if game_info.is_host %}
         <a href="{% url 'end_game' pk=game.pk %}" class='btn'>Stop Game</a><br />
     {% endif %}
 
-    Players: 
-    {% for player in players %}
-        {{ player.name }}<br />
-    {% endfor %}
+    <span>Waiting for other players...</span>
     <br /><br />
+    <span>Players: </span><br /><br />
+    <table style='margin:0 auto;'>
+        <tr>
+            
+                 {% for player in players %}
+                 <td>
+                    <span> {{ player.name }}</span><br /><br />
+                    <img src="/media/miscs/other.jpeg" /><br />
+                </td>
+                {% endfor %}
+            
+        </tr>
+    </table>
+   
+    
 
-    Waiting for other players...
+    <br /><br />
+    <span>Center Cards</span>
+    <br /><br />
+    {% for card in center_cards %}
+        <img src="/media/miscs/other.jpeg" />
+    {% endfor %}
+    <br /><br /><br />
+    
+    <span>You are a: {{ role.name }}</span><br /><br />
+    <img src="{{ role.image.url }}" title="{{ role.characteristic }}" />
 </div>
+
+
+
+<!-- I will separate codes below, but still figuring out -->
+    <div class='board_history col-md-2'>
+    <span class='log_title'>Game Log</span>
+    </div>
+
 {% endblock %}

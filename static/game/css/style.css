@@ -42,8 +42,8 @@ html,body {
 .center_div {
     color: black;
     text-align: center;
-    width: 200px;
-    margin: 10% auto;
+    width: 350px;
+    margin: 5% auto;
     padding: 20px;
 }
 .center_div a {
@@ -58,6 +58,35 @@ html,body {
 
 .center_div a:hover {
     background-color: #ffead2;
+}
+
+.board_div {
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.board_div span{
+    background-color:  black;
+    color:white;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-radius: 3px 3px;
+}
+
+.board_history {
+    border: 2px white solid;
+    margin-top: 15px;
+    background-color: rgba(255,255,255, 0.5);
+    height: 50%;
+}
+.log_title {
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    background-color:  white;
 }
 
 .game_select {

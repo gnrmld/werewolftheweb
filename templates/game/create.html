@@ -5,18 +5,24 @@
     <h3>Create Game</h3>
     <form method="POST">
         {% csrf_token %}
-        {{ form.non_field_errors }}
-        <div>
-            {{ form.name.errors }}
-            <label for="{{ form.name.id_for_label }}">Name</label>
-            {{ form.name }}
-        </div>
-        <div>
-            {{ form.max_players.errors }}
-            <label for="{{ form.max_players.id_for_label }}">Max Players</label>
-            {{ form.max_players }}
-        </div>
-        <button type="submit" class="btn btn-success">Go</button>
+        <table align=center>
+        <tr>
+            <td colspan=2>{{ form.name.errors }}</td>
+        </tr>
+        <tr>
+            <td><label for="{{ form.name.id_for_label }}">Name</label></td>
+            <td>{{ form.name }}</td>
+        </tr>
+        <tr>
+            <td colspan=2>{{ form.max_players.errors }}</td>
+        <tr>
+            <td><label for="{{ form.max_players.id_for_label }}">Max Players</label></td>
+            <td>{{ form.max_players }}</td>
+        </tr>
+        <tr>
+            <td colspan=2><button type="submit" class="btn btn-success">Go</button></td>
+        </tr>
+        </table>
     </form>
 </div>
 {% endblock %}
